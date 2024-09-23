@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("TOKEN","TOKEN is "+token); //eB85wHWQQw2qZEBswQaIqn:APA91bH51SFMYIKznFjipl6edXEoUvq2Oa8kXaqOuxVNgDj-Y_OsnD5Z_zzS83MaXHeYSzCCzS8NyKed66x_HR7oE86wd9-M4SyRBMoQLw2NrNtuJwoAlyLzjdxo26ZnNzTovk0JqCBf
             }
         });
+        DatabaseReference dbRef= FirebaseDatabase.getInstance().getReference("CopyWright");
+        dbRef.setValue("Heyyyyyyyyyyyyyyyyyyy");
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
