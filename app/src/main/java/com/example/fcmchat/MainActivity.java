@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         contactRef.child(contactId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+              Contactmodel model= snapshot.getValue(Contactmodel.class);
+              Log.d("MODEL","Model is "+model.getName()+" "+model.getMobNo());
             }
 
             @Override
