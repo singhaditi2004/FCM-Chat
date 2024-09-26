@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         DatabaseReference dbRef= FirebaseDatabase.getInstance().getReference("CopyWright");
-        dbRef.setValue("Heyyyyyyyyyyyyyyyyyyy");
+        dbRef.setValue("Heyyyyyyyyyyyyyyyyy");
         DatabaseReference contactRef=FirebaseDatabase.getInstance().getReference("contacts");
         String contactId=contactRef.push().getKey();
         Contactmodel contactModel=new Contactmodel("Raunak","7869309291");
